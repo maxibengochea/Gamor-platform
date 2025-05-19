@@ -174,6 +174,7 @@ function Game({ name, image, index, updateGameImage }: PropsGame) {
           height: buttonHeight,
           color: inlineStyles.colorButtonAddGame,
         }}
+        type="button"
       >
         +
       </button>
