@@ -42,27 +42,29 @@ const gamesByName = (
 };
 
 //estado global para manejar los juegos con sus filtros
-export const useGames = create<State>((set, get) => {
-  return {
-    games: [],
-    initialGames: [],
-    lastSearchedGames: [],
-    updateGamesByCategory: (categoryId: number | null) => {
-      //obtener los juegos por categoria y actualizar la ultima busqueda
-      const props = gamesByCategory(categoryId, get().initialGames);
+export const useGames = create<State>((set, get) => ({
+  games: [],
+  initialGames: [],
+  lastSearchedGames: [],
+  updateGamesByCategory: (categoryId: number | null) => {
+    //obtener los juegos por categoria y actualizar la ultima busqueda
+    const props = gamesByCategory(categoryId, get().initialGames);
 
-      set({
-        games: props.games,
-        //si la ultima busqueda vino vacia, significa que el usuario desmarco
-        //por lo tanto actualizamos la ultima busqueda con los juegos iniciales
-        lastSearchedGames: props.lastSearchedGames ?? get().initialGames, 
-      });
-    },
-    updateGamesByName: (name: string) => {
-      const props = gamesByName(name, get().lastSearchedGames); //obtener los jur=egos filtrados por nombre
-      set({ games: props.games });
-    },
-    updateGames: (initialGames: Game[]) =>
-      set({ games: initialGames, initialGames }),
-  };
-});
+    set({
+      games: props.games,
+      //si la ultima busqueda vino vacia, significa que el usuario desmarco
+      //por lo tanto actualizamos la ultima busqueda con los juegos iniciales
+      lastSearchedGames: props.lastSearchedGames ?? get().initialGames,
+    });
+  },
+  updateGamesByName: (name: string) => {
+    const props = gamesByName(name, get().lastSearchedGames); //obtener los jur=egos filtrados por nombre
+    set({ games: props.games });
+  },
+  updateGames: (initialGames: Game[]) =>
+    set({
+      games: initialGames,
+      initialGames,
+      lastSearchedGames: initialGames,
+    }),
+}));
