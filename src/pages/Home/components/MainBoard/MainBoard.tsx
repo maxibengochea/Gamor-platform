@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import GameList from "../GameList/GameList";
 import "./MainBoard.css";
 import type { FortnitePromoImg } from "../../../../types/fornite-promo-img.type";
 import { useTheme } from "../../../../store/useTheme.store";
+import { format } from "date-fns";
 
 type InlineStyles = {
   colorStreamingText: string;
@@ -18,6 +19,7 @@ type InlineStyles = {
 function MainBoard() {
   const [gameImage, setGameImage] = useState<FortnitePromoImg | null>(null); //imagen de background
   const isDarkTheme = useTheme((state) => state.isDarkTheme); //saber el tema de fondo
+  const [time, setTime] = useState<string | null>(null);
 
   const inlineStyles: InlineStyles = {
     colorStreamingText: isDarkTheme ? "blueviolet" : "orange",
@@ -29,6 +31,19 @@ function MainBoard() {
     colorNotStrongTextSection1: isDarkTheme ? "darkgray" : "black",
     colorAuthButton: isDarkTheme ? "white" : "black",
   };
+
+  useEffect(() => {
+    //obtener la hora formateada
+    const newTime = format(new Date(), "HH:mm:ss");
+
+    //actualizar la hora cada segundo
+    const interval = setInterval(() => {
+      setTime(newTime);
+    }, 1000);
+
+    //eliminar el objeto cuando se destruye el componente
+    return () => clearTimeout(interval);
+  });
 
   return (
     <section className="main-board-content">
@@ -120,7 +135,7 @@ function MainBoard() {
             zIndex: 2,
           }}
         >
-          11 : 45
+          {time}
         </span>
       </article>
       <GameList updateGameImage={setGameImage} />
