@@ -21,6 +21,7 @@
 .login-legend-fieldset {
   font-size: 1.5em; 
   margin-bottom: 1rem; 
+  font-weight: bold;
 }
 
 .form-login-input[type="text"] {
