@@ -52,7 +52,7 @@ function Home() {
       //si no esta logeado, enviar un mensaje cada 10 segundos
       interval = setInterval(() => {
         alert("To enjoy all the features, please sign in");
-      }, 10000);
+      }, 7000);
     }
 
     //dejar de enviar el mensaje cuando se destruya el componente
