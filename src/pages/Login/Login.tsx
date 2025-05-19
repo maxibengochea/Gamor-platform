@@ -25,8 +25,8 @@ function Login() {
 
     //si no ingreso nombre actualizar el username y la autenticacion ambos con null
     if (!username || username === "") {
-      updateAuth(false);
-      updateUsername(null);
+      alert("'username' field is required")
+      return
     } 
     
     //actualizar el nombre y la autenticacion
