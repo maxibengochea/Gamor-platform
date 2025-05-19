@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Counter-Strike 2",
+    "category": { "id": 1, "name": "Acción" },
+    "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/730/header.jpg"
+  },
+  {
+    "id": 2,
+    "name": "The Legend of Zelda: Breath of the Wild",
+    "category": { "id": 2, "name": "Aventura" },
+    "image": "https://upload.wikimedia.org/wikipedia/en/0/0b/The_Legend_of_Zelda_Breath_of_the_Wild.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Civilization VI",
+    "category": { "id": 3, "name": "Estrategia" },
+    "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/289070/header.jpg"
+  },
+  {
+    "id": 4,
+    "name": "FIFA 23",
+    "category": { "id": 4, "name": "Deportes" },
+    "image": "https://upload.wikimedia.org/wikipedia/en/f/f8/FIFA_23_Cover.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Elden Ring",
+    "category": { "id": 5, "name": "RPG" },
+    "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/header.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Microsoft Flight Simulator",
+    "category": { "id": 6, "name": "Simulación" },
+    "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1250410/header.jpg"
+  }
+]

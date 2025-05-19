@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #12151c;
+  color: #fff;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.left, .center, .right {
+  padding: 2rem;
+}
+
+.left {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.nav li {
+  color: #ccc;
+  cursor: pointer;
+}
+
+.nav li.active {
+  color: #fff;
+  border-bottom: 2px solid #fff;
+}
+
+.nav .actions {
+  margin-top: 2rem;
+}
+
+.nav .btn {
+  background: #262a33;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 20px;
+  margin-right: 1rem;
+}
+
+.headline h1 {
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+.highlight {
+  color: #a55cf5;
+}
+
+.underline {
+  border-bottom: 1px solid #a55cf5;
+}
+
+.cta-buttons {
+  margin-top: 1.5rem;
+}
+
+.cta-buttons .btn {
+  background-color: #262a33;
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  color: white;
+  border: none;
+  margin-right: 1rem;
+}
+
+.center {
+  width: 40%;
+  background-color: #ff8a3d;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.announcement {
+  text-align: center;
+  color: white;
+}
+
+.announcement h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.announcement p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.countdown {
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  background-color: #fff;
+  color: #ff8a3d;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.character {
+  height: 300px;
+  margin-top: 1rem;
+}
+
+.right {
+  width: 30%;
+}
+
+.step {
+  margin-bottom: 2rem;
+}
+
+.step h4 {
+  font-weight: 500;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.options {
+  display: flex;
+  gap: 1rem;
+}
+
+.option {
+  background: #1e2128;
+  color: #ccc;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.option.selected {
+  background: #a55cf5;
+  color: white;
+}
+
+.game-list p {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.game-list ol {
+  padding-left: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.game-list li {
+  margin-bottom: 0.3rem;
+}
+
+.game-list .disabled {
+  color: #555;
+}
+
+.btn-light {
+  background-color: white;
+  color: #12151c;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}

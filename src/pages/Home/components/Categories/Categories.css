@@ -1,0 +1,46 @@
+:root {
+  --box-shadow-category: inset 1px 1px 5px gainsboro, 1px 1px 5px gainsboro;
+  --background-color-selected-category: orange;
+  --color-category: black
+}
+
+.dark-mode {
+  --box-shadow-category: inset 1px 1px 5px #1c2833 , 1px 1px 5px #1c2833 ;
+  --background-color-selected-category: blueviolet;
+  --color-category: white
+}
+
+.categories-section {
+  margin: 5px auto;
+  width: 80%;
+}
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.3rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.categories p {
+  vertical-align: top;
+  margin: 0;
+  padding-bottom: 15px;
+}
+
+.category {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  box-shadow: var(--box-shadow-category);
+  padding-left: 5px;
+  color: var(--color-category);
+}
+
+.selected-category {
+  background-color: var(--background-color-selected-category);
+  color: white;
+}

@@ -1,0 +1,114 @@
+:root {
+  --color-nav-item: darkgray;
+  --color-nav-item-selected: black;
+  --background-color-nav-item-selected: gainsboro;
+  --background-color-button-submit: black;
+  --color-button-submit: white;
+  --box-shadow-game-list: inset 1px 1px 5px gainsboro, 1px 1px 5px gainsboro;
+  --color-game-name: black;
+  --background-color-game-input: white;
+  --color-game-input: black
+}
+
+.dark-mode {
+  --color-nav-item: white;
+  --color-nav-item-selected: white;
+  --background-color-nav-item-selected: #424949;
+  --background-color-button-submit: white;
+  --color-button-submit: black;
+  --box-shadow-game-list: inset 1px 1px 5px #1b2631, 1px 1px 5px #1b2631;
+  --color-game-name: white;
+  --background-color-game-input: #212f3c;
+  --color-game-input: white
+}
+
+.game-list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.game-list-header {
+  width: 80%;
+  height: 20%;
+}
+
+.game-list-header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.game-list-header nav * {
+  flex: 1;
+  text-align: center;
+}
+
+.game-list-header nav .nav-item {
+  color: var(--color-nav-item);
+  padding: 5px 0;
+}
+
+.game-list-header nav .nav-item-selected {
+  color: var(--color-nav-item-selected);
+  background-color: var(--background-color-nav-item-selected);
+  border: none;
+}
+
+/*.game-list-header nav .nav-selected-item .game-list {
+  height: 80%;
+  width: 80%;
+}*/
+
+.game-list {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.game-list input {
+  width: 100%;
+  padding: 5px 3px;
+  box-sizing: border-box;
+  box-shadow: var(--box-shadow-game-list);
+  border: none;
+  background-color: var(--background-color-game-input);
+  color: var(--color-game-input)
+}
+
+.games {
+  list-style: none;
+  margin-bottom: 10px;
+  margin-bottom: 0;
+  padding: 0;
+  width: 100%;
+  box-shadow: var(--box-shadow-game-list);
+  flex: 1;
+  overflow: auto
+}
+
+.game-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.game-name {
+  width: 90%;
+  color: var(--color-game-name);
+}
+
+.game-list-button-submit {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color-button-submit);
+  color: var(--color-button-submit);
+  border: none;
+  padding: 10px 0;
+  font-weight: bold;
+}

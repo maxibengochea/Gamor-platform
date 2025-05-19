@@ -1,0 +1,64 @@
+:root {
+  --color-nav-selected-item: orange;
+  --backgroundColor: whitesmoke;
+  --color-hover-sign-in-header: orange;
+  --color-sign-in-header: black;
+}
+
+.dark-mode {
+  --color-nav-selected-item: blueviolet;
+  --backgroundColor: #212f3c;
+  --color-hover-sign-in-header: blueviolet;
+  --color-sign-in-header: white;
+}
+
+.general-container {
+  background-color: var(--backgroundColor);
+}
+
+.header-home {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 10px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.header-home * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.header-home nav .nav-item {
+  color: darkgray;
+}
+
+.header-home nav .nav-item-selected {
+  color: var(--color-nav-selected-item);
+}
+
+.auth-manager {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.container-button-sign-in {
+  display: block;
+  text-align: center;
+}
+
+.button-sign-in {
+  color: var(--color-sign-in-header);
+  display: inline;
+}
+
+.button-sign-in:hover {
+  color: var(--color-hover-sign-in-header);
+}
+
+main {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}

@@ -1,0 +1,75 @@
+:root {
+  --box-shadow-main: inset 1px 1px 5px gainsboro, 1px 1px 5px gainsboro;
+  --backgroundColor-main: white;
+  --color-section-1-text-big: black;
+  --color-section-1-text-small: black;
+}
+
+.dark-mode {
+  --backgroundColor-main: #212f3c  ;
+  --color-section-1-text-big: white;
+  --color-section-1-text-small: gray;
+  --box-shadow-main: inset 1px 1px 5px #1c2833 , 1px 1px 5px #1c2833 ;
+}
+
+.main-board-content {
+  margin: 5px auto;
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  box-shadow: var(--box-shadow-main);
+  /*background-color: var(--backgroundColor-main);*/
+  height: 70vh;
+}
+
+.main-board-content *{
+  overflow: hidden;
+}
+
+.main-board-section-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-board-section-1 > span {
+  color: var(--color-section-1-text-small);
+}
+
+.section-1-text-container {
+  height: 60%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-1-text-container div {
+  font-weight: bold;
+  display: flex;
+  width: 70%;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.section-1-text-container div span {
+  text-align: center;
+  vertical-align: middle;
+  font-size: 250%;
+  color: var(--color-section-1-text-big);
+}
+
+.section-1-auth-content {
+  flex: 1;
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fortnite-promo-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
