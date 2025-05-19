@@ -7,7 +7,7 @@
   --box-shadow-game-list: inset 1px 1px 5px gainsboro, 1px 1px 5px gainsboro;
   --color-game-name: black;
   --background-color-game-input: white;
-  --color-game-input: black
+  --color-game-input: black;
 }
 
 .dark-mode {
@@ -19,7 +19,7 @@
   --box-shadow-game-list: inset 1px 1px 5px #1b2631, 1px 1px 5px #1b2631;
   --color-game-name: white;
   --background-color-game-input: #212f3c;
-  --color-game-input: white
+  --color-game-input: white;
 }
 
 .game-list-container {
@@ -76,7 +76,11 @@
   box-shadow: var(--box-shadow-game-list);
   border: none;
   background-color: var(--background-color-game-input);
-  color: var(--color-game-input)
+  color: var(--color-game-input);
+}
+
+.game-list input:focus {
+  outline: none
 }
 
 .games {
@@ -87,7 +91,7 @@
   width: 100%;
   box-shadow: var(--box-shadow-game-list);
   flex: 1;
-  overflow: auto
+  overflow: auto;
 }
 
 .game-container {
